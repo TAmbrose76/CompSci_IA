@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  Volunteer
+{% endblock %}
+
+{% block body %}
+<form class="email" action="{{ url_for('volunteer') }}" method="POST">
+  <input type="text" name="firstname" placeholder="first name">
+  <input type="text" name="lastname" placeholder="last name">
+  <input type="email" name="email" placeholder="email">
+  <br>
+  <button type="submit">Sign Up</button>
+
+</form>
+
+{% endblock %}

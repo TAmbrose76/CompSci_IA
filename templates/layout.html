@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+  <title>BB Hobart</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='logo.jpg') }}" />
+</head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+<nav>
+
+<div class="link linkextra" style="background-color=inherit">
+  <a href="{{ url_for('home') }}">
+    <img src="{{ url_for('static', filename='logo(nav).jpg') }}" alt="Boys Brigade Australia logo" style="width:125px; vertical-align: middle;">
+  </a>
+</div>
+
+<div class="link">
+  <a href="{{ url_for('home') }}">HOME</a>
+</div>
+
+<div class="link">
+  <a href="{{ url_for('newsletter') }}">NEWSLETTER</a>
+</div>
+
+<div class="link">
+  <a href="{{ url_for('about') }}">ABOUT</a>
+</div>
+
+<div class="link">
+  <a href="{{ url_for('volunteer') }}">VOLUNTEER</a>
+</div>
+
+<div class="link linkextra" style="background-color=inherit">
+  <form class="link" action="{{ url_for('admin') }}" method="POST">
+    <input type="text" name="password" placeholder="Enter Password">
+    <button type="submit" name="x" value="0">Login</button>
+  </form>
+</div>
+
+</nav>
+
+<body>
+
+    <h1 style="margin-top:150px">{% block heading %}{% endblock %}</h1>
+
+    {% block body %}
+    {% endblock %}
+
+<br style="margin: 10px"></br>
+
+    <footer>
+        <img src= "{{ url_for('static', filename='mail.jpg') }}" alt="mail img">
+        <div style= "font-size: 30px">
+            Please contact us
+        </div><br>
+        Email: scott.ambrose@bigpond.com<br><br>
+        Phone: +61 409 196 404<br><br>
+    </footer>
+
+</body>

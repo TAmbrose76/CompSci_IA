@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  Newsletter
+{% endblock %}
+
+{% block body %}
+<div class="Newsletter">
+    <img class="newsletter" src="{{ url_for('static', filename='Newsletter.png') }}" alt="Newsletter"><br>
+
+    <a style="background-color: white; border-radius: 50px; padding: 20px" href="{{ url_for('static', filename='LastWeeksNewsletter.png') }}"> Last Weeks </a>
+</div>
+
+{% endblock %}

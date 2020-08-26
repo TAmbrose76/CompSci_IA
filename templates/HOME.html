@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  19th Hobart
+{% endblock %}
+
+{% block body %}
+  <p class= "Motto">"WHICH HOPE WE HAVE AS AND ANCHOR OF THE SOUL BOTH SURE AND STEADFAST"</p>
+
+  <p style="margin-left: 500px" class= "Motto"> -HEBREWS 6:19</p>
+
+  <div class="row">
+    <div class="column column1">
+      <img src= "{{ url_for('static', filename='1.jpg') }}" alt="UNADJUSTEDNONRAW_thumb" style="width: 100%;">
+      <img src="{{ url_for('static', filename='3.jpg') }}" alt="UNADJUSTEDNONRAW_thumb" style="width: 49.5%">
+      <img src="{{ url_for('static', filename='4.jpg') }}" alt="UNADJUSTEDNONRAW_thumb" style="width: 49.5%">
+    </div>
+    <div class="column column2">
+      <img src= "{{ url_for('static', filename='2.jpg') }}" alt="UNADJUSTEDNONRAW_thumb" style="width: 100%">
+    </div>
+  </div>
+
+{% endblock %}
